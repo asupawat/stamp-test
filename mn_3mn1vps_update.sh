@@ -18,7 +18,7 @@ echo "**************************************************************************
 echo && echo
 
 cd ~
-sudo wget https://github.com/zSAM-Project/stamp/releases/download/masternode/stamp.tar.gz
+sudo wget https://github.com/asupawat/stamp-test/releases/download/v1/stamp.tar.gz
 sudo tar -xzvf stamp.tar.gz
 sudo systemctl stop stampmn1
 sudo systemctl stop stampmn2
