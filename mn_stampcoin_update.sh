@@ -18,13 +18,19 @@ echo "**************************************************************************
 echo && echo
 
 cd ~
+sudo rm ./stamp.tar.gz 
+sudo rm -rf ./stamp
+
 sudo wget https://github.com/asupawat/stamp-test/releases/download/v1/stamp.tar.gz
 sudo tar -xzvf stamp.tar.gz
+
 sudo systemctl stop stampcoin
 sleep 10
-sudo cp ~/stamp/stamp* /usr/local/bin/
-sudo rm ~/stamp.tar.gz 
-sudo rm -rf /root/stamp
+
+sudo cp ./stamp/stamp* /usr/local/bin/
+sudo rm ./stamp.tar.gz 
+sudo rm -rf ./stamp
+
 sudo systemctl start stampcoin
 sleep 10
 INFO=`sudo -H -u stampcoin /usr/local/bin/stamp-cli getinfo`
