@@ -18,6 +18,9 @@ echo "**************************************************************************
 echo && echo
 
 cd ~
+sudo rm ./stamp.tar.gz
+sudo rm -rf ./stamp
+
 sudo wget https://github.com/asupawat/stamp-test/releases/download/v1/stamp.tar.gz
 sudo tar -xzvf stamp.tar.gz
 
@@ -27,6 +30,10 @@ sleep 15
 sudo cp ./stamp/stamp* /usr/local/bin/
 sudo rm ./stamp.tar.gz
 sudo rm -rf ./stamp
+
+sudo rm ./chain.tar.gz
+sudo rm -rf ./blocks
+sudo rm -rf ./chainstate
 
 sudo wget https://github.com/asupawat/stamp-test/releases/download/v1/chain.tar.gz
 sudo tar -xzvf chain.tar.gz
